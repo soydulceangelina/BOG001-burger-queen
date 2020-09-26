@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "burgerqueen-ce419": {
+      "hosting": {
+        "burgerQueen": [
+          "burgerqueen-ce419"
+        ]
+      }
+    }
+  }
+}
