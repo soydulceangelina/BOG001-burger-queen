@@ -5,20 +5,7 @@ import { LunchProductsComponent } from './lunch-products/lunch-products.componen
 import { DrinksProductsComponent } from './drinks-products/drinks-products.component';
 
 
-const routes: Routes = [
-  {
-    path: "desayuno",
-    component: BreakfastProductsComponent
-  },
-  {
-    path: "comida",
-    component: LunchProductsComponent
-  },
-  {
-    path: "bebidas",
-    component: DrinksProductsComponent
-  }
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

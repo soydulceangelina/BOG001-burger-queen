@@ -1,1 +1,4 @@
-<p>waiter-view works!</p>
+<app-header-nav (tabChange)="changeTab($event)"></app-header-nav>
+<app-breakfast-products *ngIf="tab === 0"></app-breakfast-products>
+<app-lunch-products *ngIf="tab === 1"></app-lunch-products>
+<app-drinks-products *ngIf="tab === 2"></app-drinks-products>

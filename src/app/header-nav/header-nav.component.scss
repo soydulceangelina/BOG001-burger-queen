@@ -1,0 +1,8 @@
+a {
+    text-decoration: none;
+    padding: 10px;
+    color: #2f3132;
+    &.active{
+        font-weight: bold;
+    }
+}
