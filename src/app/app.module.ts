@@ -12,6 +12,8 @@ import { LunchProductsComponent } from './lunch-products/lunch-products.componen
 import { DrinksProductsComponent } from './drinks-products/drinks-products.component';
 import { WaiterViewComponent } from './waiter-view/waiter-view.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
+import { KitchenViewComponent } from './kitchen-view/kitchen-view.component';
+import { TogleViewComponent } from './togle-view/togle-view.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { HeaderNavComponent } from './header-nav/header-nav.component';
     LunchProductsComponent,
     DrinksProductsComponent,
     WaiterViewComponent,
-    HeaderNavComponent
+    HeaderNavComponent,
+    KitchenViewComponent,
+    TogleViewComponent
   ],
   imports: [
     BrowserModule,
