@@ -1,0 +1,24 @@
+@import '../../styles.scss';
+
+.container{
+    font-family: $roboto-font;
+    width: 20.6rem;
+    img{
+        width: 20.6rem;
+    }
+    p{
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+}
+
+
+.title-container{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    h2{
+        font-size: 1.8rem;
+        font-weight: normal;
+    }
+}

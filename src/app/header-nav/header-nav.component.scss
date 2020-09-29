@@ -1,8 +1,22 @@
-a {
-    text-decoration: none;
-    padding: 10px;
-    color: #2f3132;
-    &.active{
+@import '../../styles.scss';
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
+    font-family: $cinzel-font;
+    font-size: 2rem;
+    outline: none;
+    color: $dark-color;
+    &:hover{
+        cursor: pointer;
+    }
+    &:focus{
         font-weight: bold;
     }
+}
+
+.child1::after, .child2::after{
+    content: " • ";
+    color: $red-color;
 }

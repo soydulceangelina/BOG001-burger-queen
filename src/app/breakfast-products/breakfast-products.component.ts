@@ -17,7 +17,7 @@ export class BreakfastProductsComponent implements OnInit {
     {
       id: '1',
       image: '../../assets/image-menu/menu-20200926T011235Z-001/menu/sandwich.jpg',
-      title: 'Sandwich de jamón y queso',
+      title: 'Sandwich',
       price: 10.00,
       description: 'Sandwich de jamón y queso, con un toque de mayonesa de la casa.'
     },
@@ -38,7 +38,7 @@ export class BreakfastProductsComponent implements OnInit {
     {
       id: '4',
       image: '../../assets/image-menu/menu-20200926T011235Z-001/menu/juice.jpg',
-      title: 'Jugo de frutas natural',
+      title: 'Jugo natural',
       price: 7.00,
       description: 'Jugo de frutas naturales  en agua o en leche.'
     }
