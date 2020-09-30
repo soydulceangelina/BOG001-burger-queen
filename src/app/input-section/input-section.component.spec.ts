@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TogleViewComponent } from './togle-view.component';
+import { InputSectionComponent } from './input-section.component';
 
-describe('TogleViewComponent', () => {
-  let component: TogleViewComponent;
-  let fixture: ComponentFixture<TogleViewComponent>;
+describe('InputSectionComponent', () => {
+  let component: InputSectionComponent;
+  let fixture: ComponentFixture<InputSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TogleViewComponent ]
+      declarations: [ InputSectionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TogleViewComponent);
+    fixture = TestBed.createComponent(InputSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

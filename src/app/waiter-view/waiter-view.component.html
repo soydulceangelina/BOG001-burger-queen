@@ -1,5 +1,17 @@
-<app-header-nav (tabChange)="changeTab($event)"></app-header-nav>
-<app-breakfast-products class="products" *ngIf="tab === 0"></app-breakfast-products>
-<app-lunch-products class="products" *ngIf="tab === 1"></app-lunch-products>
-<app-drinks-products class="products" *ngIf="tab === 2"></app-drinks-products>
-<app-togle-view></app-togle-view>
+<div>
+    <app-header-nav (tabChange)="changeTab($event)"></app-header-nav>
+    <a routerLink="/cocina">
+        <img src="../../assets/icons/switch.png" alt="">
+    </a>
+</div>
+
+<div *ngIf="tab === 0" class="products">
+    <app-breakfast-products  *ngFor="let productB of breakFastProducts" [product]="productB"></app-breakfast-products>
+</div>
+<div *ngIf="tab === 1" class="products">
+    <app-lunch-products *ngFor="let productL of lunchProducts" [product]="productL"></app-lunch-products>
+</div>
+<div *ngIf="tab === 2"class="products">
+    <app-drinks-products *ngFor="let productD of drinksProducts" [product]="productD"></app-drinks-products>
+</div>
+<app-input-section></app-input-section>

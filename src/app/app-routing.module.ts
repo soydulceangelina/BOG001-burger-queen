@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {WaiterViewComponent} from './waiter-view/waiter-view.component';
 import {KitchenViewComponent} from './kitchen-view/kitchen-view.component';
-
+import {Page404Component} from './page404/page404.component';
 
 const routes: Routes = [
   {
@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: "cocina",
     component: KitchenViewComponent
+  },
+  {
+    path: "**",
+    component: Page404Component
   }
 ];
 

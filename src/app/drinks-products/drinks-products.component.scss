@@ -1,15 +1,17 @@
 @import '../../styles.scss';
 
-.container{
+:host{
     font-family: $roboto-font;
+    display: flex;
     width: 20.6rem;
-    img{
-        width: 20.6rem;
-    }
-    p{
-        font-size: 1.4rem;
-        margin-top: 1rem;
-    }
+    flex-direction: column;
+}
+img{
+    width: 20.6rem;
+}
+p{
+    font-size: 1.4rem;
+    margin-top: 1rem;
 }
 
 

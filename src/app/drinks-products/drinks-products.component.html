@@ -1,8 +1,6 @@
-<div class="container" *ngFor="let product of products">
-    <img [src]="product.image" [alt]="product.title">
-    <div class="title-container">
-        <h2> {{product.title}} </h2>
-        <h2> {{product.price | currency}} </h2>
-    </div>
-    <p> {{product.description}} </p>
+<img (click)="details()" [src]="product.image" [alt]="product.title">
+<div class="title-container">
+    <h2> {{product.title}} </h2>
+    <h2> {{product.price | currency}} </h2>
 </div>
+<p> {{product.description}} </p>

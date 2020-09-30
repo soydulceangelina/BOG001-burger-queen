@@ -13,7 +13,8 @@ import { DrinksProductsComponent } from './drinks-products/drinks-products.compo
 import { WaiterViewComponent } from './waiter-view/waiter-view.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { KitchenViewComponent } from './kitchen-view/kitchen-view.component';
-import { TogleViewComponent } from './togle-view/togle-view.component';
+import { InputSectionComponent } from './input-section/input-section.component';
+import { Page404Component } from './page404/page404.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { TogleViewComponent } from './togle-view/togle-view.component';
     WaiterViewComponent,
     HeaderNavComponent,
     KitchenViewComponent,
-    TogleViewComponent
+    InputSectionComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
