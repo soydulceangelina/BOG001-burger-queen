@@ -15,6 +15,7 @@ import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { KitchenViewComponent } from './kitchen-view/kitchen-view.component';
 import { InputSectionComponent } from './input-section/input-section.component';
 import { Page404Component } from './page404/page404.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { Page404Component } from './page404/page404.component';
     HeaderNavComponent,
     KitchenViewComponent,
     InputSectionComponent,
-    Page404Component
+    Page404Component,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {WaiterViewComponent} from './waiter-view/waiter-view.component';
 import {KitchenViewComponent} from './kitchen-view/kitchen-view.component';
 import {Page404Component} from './page404/page404.component';
+import {ProductDetailsComponent} from './product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: "mesero",
     component: WaiterViewComponent
+  },
+  {
+    path: "mesero/:id",
+    component: ProductDetailsComponent
   },
   {
     path: "cocina",
