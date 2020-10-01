@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import { from } from 'rxjs';
 import {ProductService} from '../product.service';
+import {Product} from '../product.model';
 
 @Component({
   selector: 'app-product-details',
@@ -9,6 +9,8 @@ import {ProductService} from '../product.service';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
+  // cambiar el modelo de tipado para mostrar la opciones luego
+  productSelect: Product;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,8 +20,7 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(){
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
-      const productSelect = this.productService.getProduct(id);
-      console.log(productSelect)
+      this.productSelect = this.productService.getProduct(id);
     })
   }
 
