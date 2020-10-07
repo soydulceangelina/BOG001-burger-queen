@@ -1,3 +1,4 @@
+<app-input-section></app-input-section>
 <div>
     <app-header-nav (tabChange)="changeTab($event)"></app-header-nav>
     <a routerLink="/cocina">
@@ -14,4 +15,3 @@
 <div *ngIf="tab === 2"class="products">
     <app-drinks-products *ngFor="let productD of drinksProducts" [product]="productD"></app-drinks-products>
 </div>
-<app-input-section></app-input-section>

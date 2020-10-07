@@ -16,6 +16,8 @@ import { KitchenViewComponent } from './kitchen-view/kitchen-view.component';
 import { InputSectionComponent } from './input-section/input-section.component';
 import { Page404Component } from './page404/page404.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { LayoutComponent } from './layout/layout.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     KitchenViewComponent,
     InputSectionComponent,
     Page404Component,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    SideBarComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
