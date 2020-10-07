@@ -7,33 +7,23 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
-import { BreakfastProductsComponent } from './breakfast-products/breakfast-products.component';
-import { LunchProductsComponent } from './lunch-products/lunch-products.component';
-import { DrinksProductsComponent } from './drinks-products/drinks-products.component';
-import { WaiterViewComponent } from './waiter-view/waiter-view.component';
-import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { KitchenViewComponent } from './kitchen-view/kitchen-view.component';
-import { InputSectionComponent } from './input-section/input-section.component';
 import { Page404Component } from './page404/page404.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
+import { HeaderLogoComponent } from './header-logo/header-logo.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
-import { LayoutComponent } from './layout/layout.component';
+import {LayoutComponent} from './layout/layout.component';
+import {ProductDetailsComponent} from './product-details/product-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BreakfastProductsComponent,
-    LunchProductsComponent,
-    DrinksProductsComponent,
-    WaiterViewComponent,
-    HeaderNavComponent,
     KitchenViewComponent,
-    InputSectionComponent,
     Page404Component,
-    ProductDetailsComponent,
+    HeaderLogoComponent,
     SideBarComponent,
-    LayoutComponent
+    LayoutComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
