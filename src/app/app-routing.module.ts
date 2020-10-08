@@ -4,6 +4,8 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import {ProductDetailsComponent} from './product-details/product-details.component';
 import {LayoutComponent} from './layout/layout.component';
 
+import {AdminGuard} from './admin.guard';
+
 const routes: Routes = [
   {
     path:"",
@@ -24,6 +26,7 @@ const routes: Routes = [
       },
       {
         path: "cocina",
+        canActivate: [AdminGuard],
         loadChildren: () => import('./kitchen-view/kitchen.module').then(m => m.KitchenModule)
       },
       {
