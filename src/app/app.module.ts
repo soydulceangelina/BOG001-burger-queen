@@ -7,17 +7,16 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
-import { HeaderLogoComponent } from './header-logo/header-logo.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
+
 import {LayoutComponent} from './layout/layout.component';
 import {ProductDetailsComponent} from './product-details/product-details.component';
 
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderLogoComponent,
-    SideBarComponent,
     LayoutComponent,
     ProductDetailsComponent
   ],
@@ -26,7 +25,9 @@ import {ProductDetailsComponent} from './product-details/product-details.compone
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
