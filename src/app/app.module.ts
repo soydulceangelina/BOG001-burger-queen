@@ -7,8 +7,6 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
-import { KitchenViewComponent } from './kitchen-view/kitchen-view.component';
-import { Page404Component } from './page404/page404.component';
 import { HeaderLogoComponent } from './header-logo/header-logo.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import {LayoutComponent} from './layout/layout.component';
@@ -18,8 +16,6 @@ import {ProductDetailsComponent} from './product-details/product-details.compone
 @NgModule({
   declarations: [
     AppComponent,
-    KitchenViewComponent,
-    Page404Component,
     HeaderLogoComponent,
     SideBarComponent,
     LayoutComponent,
