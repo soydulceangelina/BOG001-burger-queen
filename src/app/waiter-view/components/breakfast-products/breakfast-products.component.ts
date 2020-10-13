@@ -16,6 +16,6 @@ export class BreakfastProductsComponent implements OnInit {
   }
 
   details(){
-    console.log(this.product.id)
+    console.log(this.product)
   }
 }

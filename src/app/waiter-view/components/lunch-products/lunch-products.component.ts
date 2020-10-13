@@ -16,7 +16,7 @@ export class LunchProductsComponent implements OnInit {
   @Input() product: Product;
 
   details(){
-    console.log(this.product.id)
+    console.log(this.product)
   }
 
 }

@@ -13,6 +13,7 @@ export const environment = {
     messagingSenderId: "770417223649",
     appId: "1:770417223649:web:75e083c37293555ec694a0"
   },
+  api_url: "https://burger-queen-api.vercel.app/plates"
 };
 
 /*

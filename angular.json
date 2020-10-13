@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "burgerQueen"
+  "defaultProject": "burgerQueen",
+  "cli": {
+    "analytics": "0f6e9d2d-a679-4e43-b163-7ac2730e01a7"
+  }
 }
