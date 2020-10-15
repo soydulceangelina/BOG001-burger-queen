@@ -1,6 +1,6 @@
-<a [routerLink]="['/mesero', product.id]">
+<button (click)="addToTotal()">
     <img [src]="product.image" [alt]="product.title">
-</a>
+</button>
 <div class="title-container">
     <h2> {{product.title}} </h2>
     <h2> {{product.price | currency}} </h2>

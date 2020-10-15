@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Product} from '../../../product.model';
+import {TotalService} from '../../../core/services/total/total.service';
 
 @Component({
   selector: 'app-breakfast-products',
@@ -10,12 +11,19 @@ export class BreakfastProductsComponent implements OnInit {
 
   @Input() product: Product;
 
-  constructor() { }
+  constructor(
+    private totalService: TotalService,
+  ) { }
 
   ngOnInit(): void {
   }
 
-  details(){
-    console.log(this.product)
+  // details(){
+  //   console.log(this.product)
+  // }
+
+  addToTotal(){
+    this.totalService.addToTotal(this.product);
+    console.log('en el carritooo yuju')
   }
 }

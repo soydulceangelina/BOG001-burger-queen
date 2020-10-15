@@ -8,6 +8,7 @@ import { LunchProductsComponent } from './components/lunch-products/lunch-produc
 import { DrinksProductsComponent } from './components/drinks-products/drinks-products.component';
 import { InputSectionComponent } from './components/input-section/input-section.component';
 import {WaiterViewComponent} from './components/waiter/waiter-view.component';
+import {TotalListComponent} from './components/total-list/total-list.component';
 
 import {WaiterRoutingModule} from './waiter-routing.module';
 
@@ -19,6 +20,7 @@ import {WaiterRoutingModule} from './waiter-routing.module';
         HeaderNavComponent,
         InputSectionComponent,
         WaiterViewComponent,
+        TotalListComponent
     ],
     imports: [
         FormsModule,

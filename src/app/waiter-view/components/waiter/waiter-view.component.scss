@@ -1,8 +1,15 @@
 @import '../../../../styles.scss';
 
-.products{
-    width: 50%;
+.main--container{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    width: 100%;
+}
+
+.main--products{
+    width: 50%;
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }

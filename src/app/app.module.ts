@@ -21,7 +21,7 @@ import { CoreModule } from './core/core.module';
   declarations: [
     AppComponent,
     LayoutComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,
