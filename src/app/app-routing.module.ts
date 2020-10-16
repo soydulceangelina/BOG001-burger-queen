@@ -8,14 +8,14 @@ import {AdminGuard} from './admin.guard';
 
 const routes: Routes = [
   {
+    path: "",
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
+    pathMatch: "full"
+  },
+  {
     path:"",
     component: LayoutComponent,
     children:[
-      {
-        path: "",
-        redirectTo: "mesero",
-        pathMatch: "full"
-      },
       {
         path: "mesero",
         loadChildren: () => import('./waiter-view/waiter.module').then(m => m.WaiterModule)
@@ -26,7 +26,7 @@ const routes: Routes = [
       },
       {
         path: "cocina",
-        canActivate: [AdminGuard],
+        // canActivate: [AdminGuard],
         loadChildren: () => import('./kitchen-view/kitchen.module').then(m => m.KitchenModule)
       },
       {

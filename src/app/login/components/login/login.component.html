@@ -1,0 +1,19 @@
+<div class="container">
+    <figure class="container__img">
+        <img class="container__img--content" src="../../../../assets/login-image/login-img.jpg" alt="">
+    </figure>
+    <form class="container__form" [formGroup]="form" (ngSubmit)="login($event)">
+        <h2 class="container__form--content">BIENVENIDO DE NUEVO AL REINO</h2>
+        <label class="container__form--content" for="email">
+            <span>Correo</span>
+            <input placeholder="ej: rol@burgerqueen.com" id="email" formControlName="email" type="email">
+        </label>
+        <label class="container__form--content" for="password">
+            <span>Contraseña</span>
+            <input placeholder="ej: 123456789" id="password" formControlName="password" type="password">
+        </label>
+        <div class="container__form--content">
+            <button type="submit">INGRESAR</button>
+        </div>
+    </form>
+</div>

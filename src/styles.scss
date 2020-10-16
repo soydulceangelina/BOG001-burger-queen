@@ -6,6 +6,13 @@ $dark-color: #2f3132;
 $light-color: #fafafa;
 $gray-color: #d1d2d2;
 
+%centerWithFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
