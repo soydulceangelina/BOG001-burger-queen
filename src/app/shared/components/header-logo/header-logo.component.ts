@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+
+import {AuthService} from '../../../core/services/auth/auth.service';
 
 @Component({
   selector: 'app-header-logo',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderLogoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private auth: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  logout(){
+    this.auth.logout()
+    .then(() => {
+      this.router.navigate(['./'])
+    })
   }
 
 }

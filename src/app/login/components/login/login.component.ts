@@ -30,10 +30,14 @@ export class LoginComponent implements OnInit {
       this.authService
         .login(value.email, value.password)
         .then(() => {
-          this.router.navigate(['/mesero']);
+          if(value.email === "mesero@burgerqueen.com"){
+            this.router.navigate(['/mesero']);
+          }else{
+            this.router.navigate(['/cocina']);
+          }
         })
         .catch(() => {
-          alert('User no valid');
+          alert('Rol no encontrado');
         });
     }
   }

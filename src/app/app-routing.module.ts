@@ -9,8 +9,12 @@ import {AdminGuard} from './admin.guard';
 const routes: Routes = [
   {
     path: "",
-    loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
+    redirectTo: 'login',
     pathMatch: "full"
+  },
+  {
+    path: "login",
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   },
   {
     path:"",
@@ -18,14 +22,17 @@ const routes: Routes = [
     children:[
       {
         path: "mesero",
+        canActivate: [AdminGuard],
         loadChildren: () => import('./waiter-view/waiter.module').then(m => m.WaiterModule)
       },
       {
         path: "mesero/:id",
+        canActivate: [AdminGuard],
         component: ProductDetailsComponent
       },
       {
         path: "cocina",
+        canActivate: [AdminGuard],
         // canActivate: [AdminGuard],
         loadChildren: () => import('./kitchen-view/kitchen.module').then(m => m.KitchenModule)
       },
