@@ -7,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputSectionComponent implements OnInit {
 
-  name = "nombre del comensal";
-  table = "número de mesa"
+  name = "";
+  table = "";
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  sendToLocalStorage(name, table){
+    console.log(this.name, this.table)
+  }
 }

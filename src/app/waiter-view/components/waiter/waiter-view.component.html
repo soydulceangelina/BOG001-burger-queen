@@ -1,9 +1,6 @@
 <app-input-section></app-input-section>
 <div>
     <app-header-nav (tabChange)="changeTab($event)"></app-header-nav>
-    <a routerLink="/cocina">
-        <img src="../../assets/icons/switch.png" alt="">
-    </a>
 </div>
 
 <section class="main--container">
@@ -18,8 +15,10 @@
             <app-drinks-products *ngFor="let productD of drinksProducts" [product]="productD"></app-drinks-products>
         </div>
     </div>
-    <div>
-        <app-total-list></app-total-list>
+    <div class="main--total">
+        <div class="main--total__container">
+            <app-total-list></app-total-list>
+        </div>
     </div>
 </section>
 

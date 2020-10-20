@@ -6,6 +6,29 @@ $dark-color: #2f3132;
 $light-color: #fafafa;
 $gray-color: #d1d2d2;
 
+$border-radius: 5px;
+
+%inputStyle{
+    background: rgba(255, 255, 255, .7);
+        border: none;
+        height: 45px;
+        padding: 0 10px;
+        outline: none;
+        font-size: 1.6rem;
+        border-radius: $border-radius;
+}
+
+%button{
+    width: 200px;
+    height: 45px;
+    border: none;
+    outline: none;
+    font-family: $roboto-font;
+    color: $light-color;
+    font-weight: bold;
+    border-radius: $border-radius;
+}
+
 %centerWithFlex {
     display: flex;
     justify-content: center;

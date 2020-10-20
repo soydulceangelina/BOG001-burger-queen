@@ -1,10 +1,11 @@
-<div>
-    <label for="name">
-        <input type="text" [(ngModel)]="name">
+<div class="container">
+    <label class="container__label" for="name">
+        <!-- <h3> {{name}} </h3> -->
+        <input placeholder="Cliente" type="text" [(ngModel)]="name">
     </label>
-    <h3> {{name}} </h3>
-    <label for="table">
-        <input type="text" [(ngModel)]="table">
+    <label class="container__label" for="table">
+        <!-- <h5> {{table}} </h5> -->
+        <input placeholder="# de mesa" type="text" [(ngModel)]="table">
     </label>
-    <h5> {{table}} </h5>
+    <button (click)="sendToLocalStorage()">Ok</button>
 </div>

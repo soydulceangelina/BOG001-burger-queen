@@ -1,7 +1,10 @@
 <h4>Tu orden</h4>
-<div>
+<div class="container">
     <ul>
         <li *ngFor="let product of total">{{product.title}} {{product.price | currency}} </li>
     </ul>
-    <!-- <h3>Total = {{total.reduce()}} </h3> -->
+    <div class="container__pay">
+        <button (click)="sendOrder()">Enviar</button>
+        <h3>Total {{ totalToPay | currency }}</h3>
+    </div>
 </div>

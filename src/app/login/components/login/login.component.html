@@ -1,9 +1,9 @@
 <div class="container">
     <figure class="container__img">
-        <img class="container__img--content" src="../../../../assets/login-image/login-img.jpg" alt="">
+        <img class="container__img--content" src="../../../../assets/login-image/login-image.jpg" alt="">
     </figure>
     <form class="container__form" [formGroup]="form" (ngSubmit)="login($event)">
-        <h2 class="container__form--content">BIENVENIDO DE NUEVO AL REINO</h2>
+        <h2 class="container__form--content title">BIENVENIDO DE NUEVO AL REINO</h2>
         <label class="container__form--content" for="email">
             <span>Correo</span>
             <input placeholder="ej: rol@burgerqueen.com" id="email" formControlName="email" type="email">

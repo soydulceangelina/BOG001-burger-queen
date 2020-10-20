@@ -1,1 +1,24 @@
+@import '../../../../styles.scss';
 
+.container{
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    font-family: $roboto-font;
+    &__label{
+        input{
+            @extend %inputStyle;
+        }
+    }
+}
+
+button{
+    width: 30px;
+    border: none;
+    outline: none;
+    font-family: $roboto-font;
+    color: $light-color;
+    font-weight: bold;
+    border-radius: $border-radius;
+    background: $red-color;
+}

@@ -1,0 +1,25 @@
+@import '../../../../styles.scss';
+
+:host{
+    color: $dark-color;
+}
+
+h4{
+    font-size: 1.6rem;
+    font-family: $cinzel-font;
+}
+
+.container{
+    &__pay{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button{
+            @extend %button;
+            background: $red-color;
+        }
+    }
+}
+li{
+    list-style: none;
+}

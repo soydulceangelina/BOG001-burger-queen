@@ -17,4 +17,28 @@
             margin-bottom: 15px;
         }
     }
+    .title{
+        font-family: $cinzel-font;
+        font-size: 1.8rem;
+    }
+
+}
+
+label{
+    width: 50%;
+    input{
+        width: 100%;
+        max-width: 325px;
+        @extend %inputStyle;
+    }
+    span{
+        font-family: $roboto-font;
+        font-size: 1.6rem;
+        color: $light-color;
+    }
+}
+
+button{
+    @extend %button;
+    background: $red-color;
 }

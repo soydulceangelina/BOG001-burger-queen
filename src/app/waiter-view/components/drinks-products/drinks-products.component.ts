@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Product} from '../../../product.model';
 
+import {TotalService} from '../../../core/services/total/total.service';
+
 @Component({
   selector: 'app-drinks-products',
   templateUrl: './drinks-products.component.html',
@@ -8,14 +10,20 @@ import {Product} from '../../../product.model';
 })
 export class DrinksProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private totalService: TotalService,
+  ) { }
 
   ngOnInit(): void{
   }
 
   @Input() product: Product;
 
-  details(){
-    console.log(this.product)
+  // details(){
+  //   console.log(this.product)
+  // }
+
+  addToTotal(){
+    this.totalService.addToTotal(this.product);
   }
 }

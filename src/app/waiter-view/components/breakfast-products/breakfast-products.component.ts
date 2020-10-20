@@ -24,6 +24,5 @@ export class BreakfastProductsComponent implements OnInit {
 
   addToTotal(){
     this.totalService.addToTotal(this.product);
-    console.log('en el carritooo yuju')
   }
 }

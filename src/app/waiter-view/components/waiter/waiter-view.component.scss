@@ -2,14 +2,30 @@
 
 .main--container{
     display: flex;
+    justify-content: space-between;
     width: 100%;
 }
 
 .main--products{
-    width: 50%;
+    width: 50vw;
     &__item{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+    }
+}
+
+.main--total{
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $yellow-color;
+    &__container{
+        width: 90%;
+        height: 90%;
+        background-color: rgba(255, 255, 255, .7);
+        border-radius: $border-radius;
+        padding: 10px;
     }
 }

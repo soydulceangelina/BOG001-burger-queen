@@ -23,4 +23,6 @@ export class TotalService {
     // con el next le notificamos a los componentes que esten suscritos qie hubo un cambio, y se envia la copia actualizada del array de productos.
     this.total.next(this.products);
   }
+
+  
 }
