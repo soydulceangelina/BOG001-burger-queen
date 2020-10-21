@@ -3,6 +3,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { AuthService } from '../../../core/services/auth/auth.service';
 import { Router } from '@angular/router';
 
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -37,7 +39,11 @@ export class LoginComponent implements OnInit {
           }
         })
         .catch(() => {
-          alert('Rol no encontrado');
+          Swal.fire(
+            'Intenta de nuevo',
+            'usuario no encontrado',
+            'question'
+          );
         });
     }
   }

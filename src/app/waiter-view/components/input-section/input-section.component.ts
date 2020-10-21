@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-input-section',
@@ -16,6 +18,17 @@ export class InputSectionComponent implements OnInit {
   }
 
   sendToLocalStorage(name, table){
-    console.log(this.name, this.table)
+    if(name !== "" && table !== ""){
+      localStorage.setItem('client', this.name);
+      localStorage.setItem('table', this.table)
+      this.name = "";
+      this.table = "";
+    }else{
+      // alert('Completa los campos')
+      Swal.fire({
+        icon: 'error',
+        text: 'Completa los campos!',
+      })
+    }
   }
 }

@@ -16,7 +16,9 @@
 }
 
 .main--total{
+    height: calc(100vh - 215px);
     width: 40vw;
+    max-width: 418px;
     display: flex;
     align-items: center;
     justify-content: center;

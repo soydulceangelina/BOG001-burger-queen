@@ -4,5 +4,7 @@ export interface Order {
     id: string;
     products: Product[];
     total: number;
-    date: Date,
+    date: Date;
+    client: string;
+    table: string;
 }  
