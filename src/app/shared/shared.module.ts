@@ -4,9 +4,11 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderLogoComponent } from './components/header-logo/header-logo.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { OrderTransformPipe } from './pipes/order/order-transform.pipe';
 
 @NgModule({
   declarations: [
+    OrderTransformPipe,
     HeaderLogoComponent,
     SideBarComponent
   ],
@@ -15,6 +17,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     RouterModule
   ],
   exports: [
+    OrderTransformPipe,
     HeaderLogoComponent,
     SideBarComponent
   ]

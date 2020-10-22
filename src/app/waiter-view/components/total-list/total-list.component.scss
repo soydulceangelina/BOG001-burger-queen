@@ -4,12 +4,33 @@
     color: $dark-color;
 }
 
-h4{
+h3,h4{
     font-size: 1.6rem;
     font-family: $cinzel-font;
 }
 
 .container{
+    &__products{
+        height: 410px;
+        li{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin: 10px 0;
+            font-size: 1.8rem;
+            font-family: $roboto-font;
+            button{
+                font-size: 2rem;
+                width: 3rem;
+                height: 3rem;
+                border: none;
+                border-radius: 50px;
+                background-color: $gray-color;
+                color: $red-color;
+                outline: none;
+            }
+        }
+    }
     &__pay{
         display: flex;
         justify-content: space-between;
@@ -21,10 +42,10 @@ h4{
     }
 }
 
-ul{
-    height: 410px;
-}
+// ul{
+//     height: 410px;
+//     li{
+//         list-style: none;
+//     }
+// }
 
-li{
-    list-style: none;
-}

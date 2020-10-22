@@ -28,7 +28,7 @@ export class TotalListComponent implements OnInit {
       console.log(products);
       this.total = products;
       if (products.length > 0) {
-        this.totalToPay = products.map(product => product.price).reduce((a, b) => a + b)
+        this.totalToPay = products.map(product => product.priceByQty).reduce((a, b) => a + b)
       }
     });
     this.collection = this.firestore.collection<any>('order');
@@ -54,6 +54,10 @@ export class TotalListComponent implements OnInit {
       'Tu pedido se esta preparando!',
       'success'
     )
+    this.totalService.total$.subscribe(p =>{
+      p = []
+      console.log(p)
+    })
     return this.collection.doc(id).set(order);
   }
 }

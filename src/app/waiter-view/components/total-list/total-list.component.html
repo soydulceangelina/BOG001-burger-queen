@@ -1,7 +1,11 @@
 <h4>Tu orden</h4>
 <div class="container">
-    <ul>
-        <li *ngFor="let product of total">{{product.title}} {{product.price | currency}} </li>
+    <ul class="container__products">
+        <li *ngFor="let product of total">{{product.title}} {{product.priceByQty | currency}}
+            <button>-</button>
+            <p>{{product.quantity}}</p>
+            <button>+</button>
+        </li>
     </ul>
     <div class="container__pay">
         <button (click)="sendOrder()">Enviar</button>

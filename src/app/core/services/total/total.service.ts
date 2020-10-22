@@ -17,10 +17,19 @@ export class TotalService {
 
   constructor() { }
   // metodo para agregar el producto
-  addToTotal(product: Product){
+  addToTotal(ourProduct: Product, option?: string): void{
+    const ourProductIdx = this.products.findIndex(product => product.id === ourProduct.id);
+    if (ourProductIdx !== -1) {
+      this.products[ourProductIdx].quantity++;
+      this.products[ourProductIdx].priceByQty = this.products[ourProductIdx].price * this.products[ourProductIdx].quantity
+    } else {
+      ourProduct.quantity = 1;
+      ourProduct.priceByQty = ourProduct.price
+      this.products = [...this.products, ourProduct];
+    }
     // practica de no mutacion, y agregamos el ultimo producto
-    this.products = [...this.products, product];
     // con el next le notificamos a los componentes que esten suscritos qie hubo un cambio, y se envia la copia actualizada del array de productos.
+    console.log(this.products)
     this.total.next(this.products);
   }
 

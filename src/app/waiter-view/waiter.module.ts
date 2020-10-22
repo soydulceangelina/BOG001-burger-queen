@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import {SharedModule} from '../shared/shared.module';
+
 import { HeaderNavComponent } from './components/header-nav/header-nav.component';
 import { BreakfastProductsComponent } from './components/breakfast-products/breakfast-products.component';
 import { LunchProductsComponent } from './components/lunch-products/lunch-products.component';
@@ -25,7 +27,8 @@ import {WaiterRoutingModule} from './waiter-routing.module';
     imports: [
         FormsModule,
         CommonModule,
-        WaiterRoutingModule
+        WaiterRoutingModule,
+        SharedModule
     ]
 })
 export class WaiterModule {
