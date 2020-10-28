@@ -9,7 +9,7 @@ import {Product} from '../../../product.model';
 })
 export class TotalService {
 
-  private products: Product[] = [];
+  products: Product[] = [];
   private total = new BehaviorSubject<Product[]>([]);// lo inicializo en cero, con un array vacio
 
   //variable publica, cualquier componente o modulo se puede suscribir a sus cambios.

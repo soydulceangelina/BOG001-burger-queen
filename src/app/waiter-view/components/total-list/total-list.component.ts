@@ -16,8 +16,6 @@ export class TotalListComponent implements OnInit {
   total = [];
   totalToPay = 0
   private collection: AngularFirestoreCollection<any>;
-  client = localStorage.getItem('client');
-  table = localStorage.getItem('table');
 
 
   constructor(
@@ -39,25 +37,25 @@ export class TotalListComponent implements OnInit {
 
   sendOrder(): Promise<void> {
     const id = this.firestore.createId();
+    const client = localStorage.getItem('client');
+    const table = localStorage.getItem('table');
+
     const order: Order = {
       id,
       products: this.total,
       total: this.totalToPay,
       date: new Date(),
-      client: this.client,
-      table: this.table,
+      client,
+      table,
     };
     this.total = [];
+    this.totalService.products = []
     this.totalToPay = 0;
     Swal.fire(
       'Enviado!',
       'Tu pedido se esta preparando!',
       'success'
     )
-    this.totalService.total$.subscribe(p =>{
-      p = []
-      console.log(p)
-    })
     return this.collection.doc(id).set(order);
   }
 }

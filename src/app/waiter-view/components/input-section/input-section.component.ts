@@ -17,12 +17,13 @@ export class InputSectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  sendToLocalStorage(name, table){
-    if(name !== "" && table !== ""){
+  sendToLocalStorage(){
+    if(this.name !== "" && this.table !== ""){
       localStorage.setItem('client', this.name);
       localStorage.setItem('table', this.table)
       this.name = "";
       this.table = "";
+      console.log(name)
     }else{
       // alert('Completa los campos')
       Swal.fire({
