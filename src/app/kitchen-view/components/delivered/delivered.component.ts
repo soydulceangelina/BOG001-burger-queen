@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import {Order, status} from '../../../order.model';
 
 @Component({
   selector: 'app-delivered',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeliveredComponent implements OnInit {
 
-  constructor() { }
+  orders: Order[];
 
-  ngOnInit(): void {
-  }
+  constructor(
+    private fs: AngularFirestore,
+    ) {
+      this.orders = []
+     }
+
+     async ngOnInit(): Promise<void> {
+      const fsObs = await this.fs.collection('order').ref.orderBy("date").get();
+      const dataFs = [];
+      fsObs.forEach(a => {if(a.data().status === status.delivered){
+        dataFs.push({...a.data(), id: a.id})
+      }})
+      this.orders = dataFs
+    }
 
 }

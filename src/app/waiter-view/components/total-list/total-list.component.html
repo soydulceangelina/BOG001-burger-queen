@@ -2,9 +2,9 @@
 <div class="container">
     <ul class="container__products">
         <li *ngFor="let product of total">{{product.title}} {{product.priceByQty | currency}}
-            <button>-</button>
+            <button (click)="subtraction(product.id)">-</button>
             <p>{{product.quantity}}</p>
-            <button>+</button>
+            <button (click)="sum(product.id)">+</button>
         </li>
     </ul>
     <div class="container__pay">

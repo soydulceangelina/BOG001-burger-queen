@@ -27,9 +27,9 @@ export class TotalService {
       ourProduct.priceByQty = ourProduct.price
       this.products = [...this.products, ourProduct];
     }
+    this.products = this.products.filter(product => product.quantity > 0)
     // practica de no mutacion, y agregamos el ultimo producto
     // con el next le notificamos a los componentes que esten suscritos qie hubo un cambio, y se envia la copia actualizada del array de productos.
-    console.log(this.products)
     this.total.next(this.products);
   }
 

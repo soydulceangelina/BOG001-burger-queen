@@ -1,0 +1,35 @@
+@import '../../../../styles.scss';
+
+:host{
+    width: 50%;
+    font-family: $roboto-font;
+    font-size: 1.4rem;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    background-color: $gray-color;
+    border-radius: $border-radius;
+    padding: 15px;
+    &__product{
+        ul{
+            li{
+                list-style: none;
+                padding-bottom: 5px;
+            }
+        }
+    }
+    &__info{
+        height: auto;
+        .item{
+            padding-bottom: 10px;
+        }
+    }
+}

@@ -3,6 +3,10 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import {ProductDetailsComponent} from './product-details/product-details.component';
 import {LayoutComponent} from './layout/layout.component';
+import {InProcessComponent} from './kitchen-view/components/in-process/in-process.component';
+import {ReadyComponent} from './kitchen-view/components/ready/ready.component';
+import {DeliveredComponent} from './kitchen-view/components/delivered/delivered.component';
+
 
 import {AdminGuard} from './admin.guard';
 
@@ -33,8 +37,19 @@ const routes: Routes = [
       {
         path: "cocina",
         canActivate: [AdminGuard],
-        // canActivate: [AdminGuard],
         loadChildren: () => import('./kitchen-view/kitchen.module').then(m => m.KitchenModule)
+      },
+      {
+        path: "preparando",
+        component: InProcessComponent
+      },
+      {
+        path: "listo",
+        component: ReadyComponent
+      },
+      {
+        path: "entregados",
+        component: DeliveredComponent
       },
       {
         path: "**",

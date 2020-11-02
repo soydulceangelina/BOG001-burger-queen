@@ -1,1 +1,14 @@
-<p>ready works!</p>
+<h1>Pedidos listos para entrega</h1>
+<div class="card" *ngFor="let order of orders">
+    <div class="card__product">
+        <ul *ngFor="let product of order.products">
+            <li> {{ product.title}} <strong>{{ product.quantity}}</strong></li>
+        </ul>
+    </div>
+    <div class="card__info">
+        <p class="item" >Cliente:{{order.client}}</p>
+        <p class="item" >Mesa:{{order.table}} </p>
+        <p class="item" >Tiempo:{{order.date}} </p>
+        <button (click)="changeStatusToDelivered(order.id)" class="item">Entregar</button>
+    </div>
+</div>

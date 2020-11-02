@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {TotalService} from '../../../core/services/total/total.service';
 
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import {Order} from '../../../order.model';
+import {Order, status} from '../../../order.model';
 
 import Swal from 'sweetalert2';
 
@@ -23,7 +23,6 @@ export class TotalListComponent implements OnInit {
     private firestore: AngularFirestore
   ) {
     this.totalService.total$.subscribe(products =>{
-      console.log(products);
       this.total = products;
       if (products.length > 0) {
         this.totalToPay = products.map(product => product.priceByQty).reduce((a, b) => a + b)
@@ -47,6 +46,7 @@ export class TotalListComponent implements OnInit {
       date: new Date(),
       client,
       table,
+      status: status.inProcess
     };
     this.total = [];
     this.totalService.products = []
@@ -58,5 +58,49 @@ export class TotalListComponent implements OnInit {
     )
     return this.collection.doc(id).set(order);
   }
-}
 
+  subtraction(productId : string){
+    const sameId = this.total.find(order => order.id === productId);
+    const qty = sameId.quantity;
+    if(qty > 1){
+      this.total = this.total.map( product => {
+        if(product.id === productId){
+          product.quantity --;
+          this.totalToPay -=  product.price;
+          product.priceByQty = product.price * product.quantity
+        }
+        return product;
+      })
+    }else{
+      this.total = this.total
+      .map(t => {
+        if (t.id === productId) {
+          t.quantity--
+        }
+        return t
+      })
+      .filter(subtractionObj => subtractionObj.id !== productId);
+      if (this.total.length > 0) {
+        this.totalToPay = this.total.map(product => product.priceByQty).reduce((a, b) => a + b)
+      } else {
+        this.totalToPay = 0
+      }
+    }
+  }
+
+  sum(pId : string){
+    const prodId = this.total.find(order => order.id === pId);
+    console.log(prodId)
+    const qtity = prodId.quantity;
+    if(qtity > 0){
+      this.total = this.total.map( product => {
+        if(product.id === pId){
+          product.quantity ++;
+          this.totalToPay +=  product.price;
+          product.priceByQty = product.price * product.quantity
+        }
+        return product;
+      })
+    }
+ }
+}
