@@ -6,13 +6,13 @@
 <section class="main--container">
     <div class="main--products">
         <div *ngIf="tab === 0" class="main--products__item">
-            <app-breakfast-products  *ngFor="let productB of breakfastProducts" [product]="productB"></app-breakfast-products>
+            <app-lunch-products  *ngFor="let productB of breakfastProducts" [product]="productB"></app-lunch-products>
         </div>
         <div *ngIf="tab === 1" class="main--products__item">
             <app-lunch-products *ngFor="let productL of lunchProducts" [product]="productL"></app-lunch-products>
         </div>
         <div *ngIf="tab === 2"class="main--products__item">
-            <app-drinks-products *ngFor="let productD of drinksProducts" [product]="productD"></app-drinks-products>
+            <app-lunch-products *ngFor="let productD of drinksProducts" [product]="productD"></app-lunch-products>
         </div>
     </div>
     <div class="main--total">
