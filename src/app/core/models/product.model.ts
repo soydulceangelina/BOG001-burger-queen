@@ -19,6 +19,6 @@ export interface Product {
     category: number;
     quantity: number;
     priceByQty: number;
-    type: string[],
+    type: string[];
     ingredient: ingredient;
-}  
+}

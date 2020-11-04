@@ -12,13 +12,13 @@ export class WaiterViewComponent implements OnInit {
   lunchProducts: Product[] = [];
   drinksProducts: Product[] = [];
 
-  tab: number
+  tab: number;
 
   // inyeccion de dependencias
   constructor(
     private productService: ProductService,
   ) {
-    this.tab = 0
+    this.tab = 0;
   }
 
   ngOnInit() {
@@ -26,7 +26,7 @@ export class WaiterViewComponent implements OnInit {
   }
 
   changeTab(tab: number) {
-    this.tab = tab
+    this.tab = tab;
   }
 
   fetchProducts(){
@@ -35,6 +35,6 @@ export class WaiterViewComponent implements OnInit {
       this.breakfastProducts = products.filter(product => product.category === 0);
       this.lunchProducts = products.filter(product => product.category === 1);
       this.drinksProducts = products.filter(product => product.category === 2);
-    })
+    });
   }
 }

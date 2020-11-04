@@ -14,4 +14,4 @@ export interface Order {
     client: string;
     table: string;
     status: status;
-}  
+}

@@ -8,7 +8,7 @@ const routes: Routes = [
         path: '',
         component: KitchenViewComponent
     }
-]
+];
 
 @NgModule({
     imports: [
@@ -18,6 +18,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class KitchenRoutingModule{
-
-}
+export class KitchenRoutingModule{}

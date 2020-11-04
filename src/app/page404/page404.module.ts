@@ -5,7 +5,7 @@ import { Page404Component } from './components/page404/page404.component';
 import {Page404RoutingModule} from './page404-routing.module';
 
 @NgModule({
-    declarations:[
+    declarations: [
         Page404Component
     ],
     imports: [
@@ -14,6 +14,4 @@ import {Page404RoutingModule} from './page404-routing.module';
     ],
     exports: []
 })
-export class Page404Module {
-
-}
+export class Page404Module {}

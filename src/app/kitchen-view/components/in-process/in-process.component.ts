@@ -17,13 +17,12 @@ export class InProcessComponent implements OnInit {
 
   constructor(
     private angServ: AngFireService
-  ) { 
-    }
+  ){}
 
 
   ngOnInit(): void{
     this.orders$ = this.angServ.getOrder()
-    .pipe(map(p => p.filter(a => a.status === status.inProcess) ))
+    .pipe(map(p => p.filter(a => a.status === status.inProcess) ));
   }
 
   changeStatusToReady(id: string){

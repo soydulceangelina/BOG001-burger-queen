@@ -12,15 +12,15 @@ export class AngFireService {
 
   constructor(
     private fs: AngularFirestore,
-  ) { 
+  ){
     this.orders$ = this.fs.collection('order').valueChanges() as Observable<Order[]>;
   }
 
   getOrder(): Observable<Order[]>{
-    return this.orders$
+    return this.orders$;
   }
 
-  changeStatusToReady(id:string){
+  changeStatusToReady(id: string){
     this.fs.doc<Order>(`order/${id}`).update({status: status.ready });
   }
 

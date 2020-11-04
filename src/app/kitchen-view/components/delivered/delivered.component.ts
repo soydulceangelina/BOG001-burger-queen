@@ -21,7 +21,7 @@ export class DeliveredComponent implements OnInit {
 
     ngOnInit(){
       this.orders$ = this.angServ.getOrder()
-    .pipe(map(p => p.filter(a => a.status === status.delivered) ))
+    .pipe(map(p => p.filter(a => a.status === status.delivered) ));
     }
 
 }

@@ -17,12 +17,11 @@ export class OrderTransformPipe implements PipeTransform {
     let total = 0;
     this.totalService.total$.subscribe(products => {
       products.forEach((element) => {
-        if(element.id === value.id){
+        if (element.id === value.id) {
           total += 1;
         }
-      })
-    })
-    console.log(total)
+      });
+    });
     return total;
   }
 

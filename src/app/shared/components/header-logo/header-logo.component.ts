@@ -21,8 +21,8 @@ export class HeaderLogoComponent implements OnInit {
   logout(){
     this.auth.logout()
     .then(() => {
-      this.router.navigate(['./'])
-    })
+      this.router.navigate(['./']);
+    });
   }
 
 }

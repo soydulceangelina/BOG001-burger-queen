@@ -22,11 +22,10 @@ export class AdminGuard implements CanActivate {
     return this.auth.hasUser().pipe(
       map(user => user === null ? false : true),
       tap(hasUser => {
-        if(!hasUser){
-          this.router.navigate(['/login'])
+        if (!hasUser) {
+          this.router.navigate(['/login']);
         }
       })
     );
   }
-  
 }

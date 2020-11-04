@@ -27,6 +27,4 @@ import {WaiterRoutingModule} from './waiter-routing.module';
         SharedModule
     ]
 })
-export class WaiterModule {
-
-}
+export class WaiterModule {}

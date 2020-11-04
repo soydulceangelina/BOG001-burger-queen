@@ -8,7 +8,7 @@ const routes: Routes = [
         path: '',
         component: LoginComponent
     }
-]
+];
 
 @NgModule({
     imports: [
@@ -18,6 +18,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class LoginRoutingModule {
-
-}
+export class LoginRoutingModule {}

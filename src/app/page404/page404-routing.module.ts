@@ -8,16 +8,14 @@ const routes: Routes = [
         path: '',
         component: Page404Component
     }
-]
+];
 
 @NgModule({
-    imports:[
+    imports: [
         RouterModule.forChild(routes)
     ],
     exports: [
         RouterModule
     ]
 })
-export class Page404RoutingModule{
-
-}
+export class Page404RoutingModule{}

@@ -11,42 +11,42 @@ import {AdminGuard} from './admin.guard';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     redirectTo: 'login',
-    pathMatch: "full"
+    pathMatch: 'full'
   },
   {
-    path: "login",
+    path: 'login',
     loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   },
   {
-    path:"",
+    path: '',
     component: LayoutComponent,
-    children:[
+    children: [
       {
-        path: "mesero",
+        path: 'mesero',
         canActivate: [AdminGuard],
         loadChildren: () => import('./waiter-view/waiter.module').then(m => m.WaiterModule)
       },
       {
-        path: "cocina",
+        path: 'cocina',
         canActivate: [AdminGuard],
         loadChildren: () => import('./kitchen-view/kitchen.module').then(m => m.KitchenModule)
       },
       {
-        path: "preparando",
+        path: 'preparando',
         component: InProcessComponent
       },
       {
-        path: "listo",
+        path: 'listo',
         component: ReadyComponent
       },
       {
-        path: "entregados",
+        path: 'entregados',
         component: DeliveredComponent
       },
       {
-        path: "**",
+        path: '**',
         loadChildren: () => import('./page404/page404.module').then(m => m.Page404Module)
       }
     ]

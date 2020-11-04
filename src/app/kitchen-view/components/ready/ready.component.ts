@@ -22,7 +22,7 @@ export class ReadyComponent implements OnInit {
 
    ngOnInit(): void{
     this.orders$ = this.angServ.getOrder()
-    .pipe(map(p => p.filter(a => a.status === status.ready) ))
+    .pipe(map(p => p.filter(a => a.status === status.ready) ));
     }
 
   changeStatusToDelivered(id: string){

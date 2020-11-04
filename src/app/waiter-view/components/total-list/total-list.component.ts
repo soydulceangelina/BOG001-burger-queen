@@ -14,7 +14,7 @@ import Swal from 'sweetalert2';
 export class TotalListComponent implements OnInit {
 
   total = [];
-  totalToPay = 0
+  totalToPay = 0;
   private collection: AngularFirestoreCollection<any>;
 
 
@@ -22,10 +22,10 @@ export class TotalListComponent implements OnInit {
     private totalService: TotalService,
     private firestore: AngularFirestore
   ) {
-    this.totalService.total$.subscribe(products =>{
+    this.totalService.total$.subscribe(products => {
       this.total = products;
       if (products.length > 0) {
-        this.totalToPay = products.map(product => product.priceByQty).reduce((a, b) => a + b)
+        this.totalToPay = products.map(product => product.priceByQty).reduce((a, b) => a + b);
       }
     });
     this.collection = this.firestore.collection<any>('order');
@@ -49,58 +49,58 @@ export class TotalListComponent implements OnInit {
       status: status.inProcess
     };
     this.total = [];
-    this.totalService.products = []
+    this.totalService.products = [];
     this.totalToPay = 0;
     Swal.fire(
       'Enviado!',
       'Tu pedido se esta preparando!',
       'success'
-    )
+    );
     return this.collection.doc(id).set(order);
   }
 
-  subtraction(productId : string){
+  subtraction(productId: string) {
     const sameId = this.total.find(order => order.id === productId);
     const qty = sameId.quantity;
-    if(qty > 1){
+    if (qty > 1) {
       this.total = this.total.map( product => {
-        if(product.id === productId){
+        if (product.id === productId) {
           product.quantity --;
           this.totalToPay -=  product.price;
-          product.priceByQty = product.price * product.quantity
+          product.priceByQty = product.price * product.quantity;
         }
         return product;
-      })
+      });
     }else{
       this.total = this.total
       .map(t => {
         if (t.id === productId) {
-          t.quantity--
+          t.quantity--;
         }
-        return t
+        return t;
       })
       .filter(subtractionObj => subtractionObj.id !== productId);
       if (this.total.length > 0) {
-        this.totalToPay = this.total.map(product => product.priceByQty).reduce((a, b) => a + b)
+        this.totalToPay = this.total.map(product => product.priceByQty).reduce((a, b) => a + b);
       } else {
-        this.totalToPay = 0
+        this.totalToPay = 0;
       }
     }
   }
 
-  sum(pId : string){
+  sum(pId: string){
     const prodId = this.total.find(order => order.id === pId);
-    console.log(prodId)
+    console.log(prodId);
     const qtity = prodId.quantity;
-    if(qtity > 0){
+    if (qtity > 0) {
       this.total = this.total.map( product => {
-        if(product.id === pId){
+        if (product.id === pId) {
           product.quantity ++;
           this.totalToPay +=  product.price;
-          product.priceByQty = product.price * product.quantity
+          product.priceByQty = product.price * product.quantity;
         }
         return product;
-      })
+      });
     }
  }
 }

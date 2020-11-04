@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {environment} from './../../../../environments/environment';
 
 import {Product} from '../../models/product.model';
-import {ApiResponse} from '../../../apiResponse.model';
+import {ApiResponse} from '../../models/apiResponse.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +20,6 @@ export class ProductService {
   }
 
   getProduct(id: string){
-    return this.http.get<ApiResponse<Product>>(`${environment.api_url}/${id}`)
+    return this.http.get<ApiResponse<Product>>(`${environment.api_url}/${id}`);
   }
 }

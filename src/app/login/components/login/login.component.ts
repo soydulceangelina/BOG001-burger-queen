@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       this.authService
         .login(value.email, value.password)
         .then(() => {
-          if(value.email === "mesero@burgerqueen.com"){
+          if (value.email === 'mesero@burgerqueen.com') {
             this.router.navigate(['/mesero']);
           }else{
             this.router.navigate(['/cocina']);
