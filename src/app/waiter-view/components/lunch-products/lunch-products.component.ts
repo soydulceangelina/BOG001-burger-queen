@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import {Product, ingredient, type} from '../../../core/models/product.model';
-import {Order} from '../../../core/models/order.model';
+import {Product} from '../../../core/models/product.model';
 
 import Swal from 'sweetalert2';
 
