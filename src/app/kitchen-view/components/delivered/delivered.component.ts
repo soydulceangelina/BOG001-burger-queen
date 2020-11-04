@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
 import {Order, status} from '../../../core/models/order.model';
 import { Observable} from 'rxjs';
 import { map} from 'rxjs/operators';
@@ -16,7 +15,6 @@ export class DeliveredComponent implements OnInit {
   orders$: Observable<Order[]>;
 
   constructor(
-    private fs: AngularFirestore,
     private angServ: AngFireService
     ) {}
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable} from 'rxjs';
 import {Order, status} from '../../../core/models/order.model';
 import { map} from 'rxjs/operators';
@@ -15,23 +14,20 @@ import {AngFireService} from '../../../core/services/angFire/ang-fire.service';
 export class InProcessComponent implements OnInit {
 
   orders$: Observable<Order[]>;
-  // clock: Observable<Date>;
 
   constructor(
-    private fs: AngularFirestore,
     private angServ: AngFireService
   ) { 
-    // this.orders = []
     }
 
 
   ngOnInit(): void{
     this.orders$ = this.angServ.getOrder()
     .pipe(map(p => p.filter(a => a.status === status.inProcess) ))
-    }
+  }
 
-  changeStatusToReady(id:string){
-    this.fs.doc<Order>(`order/${id}`).update({status: status.ready });
+  changeStatusToReady(id: string){
+    this.angServ.changeStatusToReady(id);
   }
 
 }

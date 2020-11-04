@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable} from 'rxjs';
-import {Order} from '../../../core/models/order.model';
+import {Order, status} from '../../../core/models/order.model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +18,13 @@ export class AngFireService {
 
   getOrder(): Observable<Order[]>{
     return this.orders$
+  }
+
+  changeStatusToReady(id:string){
+    this.fs.doc<Order>(`order/${id}`).update({status: status.ready });
+  }
+
+  changeStatusToDelivered(id: string){
+    this.fs.doc<Order>(`order/${id}`).update({status: status.delivered });
   }
 }

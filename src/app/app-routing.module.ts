@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import {ProductDetailsComponent} from './product-details/product-details.component';
 import {LayoutComponent} from './layout/layout.component';
 import {InProcessComponent} from './kitchen-view/components/in-process/in-process.component';
 import {ReadyComponent} from './kitchen-view/components/ready/ready.component';
@@ -28,11 +27,6 @@ const routes: Routes = [
         path: "mesero",
         canActivate: [AdminGuard],
         loadChildren: () => import('./waiter-view/waiter.module').then(m => m.WaiterModule)
-      },
-      {
-        path: "mesero/:id",
-        canActivate: [AdminGuard],
-        component: ProductDetailsComponent
       },
       {
         path: "cocina",

@@ -5,34 +5,24 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AngularFireModule } from '@angular/fire';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireStorageModule } from '@angular/fire/storage';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
-import { environment } from '../environments/environment';
 import {LayoutComponent} from './layout/layout.component';
-import {ProductDetailsComponent} from './product-details/product-details.component';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
+// import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
     FormsModule,
     SharedModule,
     CoreModule,
-    AngularFireAuthModule,
-    AngularFireStorageModule,
     HttpClientModule,
     [SweetAlert2Module.forRoot()]
   ],
