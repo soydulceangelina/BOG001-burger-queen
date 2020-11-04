@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {Order} from '../../../order.model';
+import {Order} from '../../../core/models/order.model';
 import {TotalService} from '../../../core/services/total/total.service';
 
 @Pipe({

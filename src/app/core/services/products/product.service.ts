@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 
 import {environment} from './../../../../environments/environment';
 
-import {Product} from '../../../product.model';
+import {Product} from '../../models/product.model';
 import {ApiResponse} from '../../../apiResponse.model';
 
 @Injectable({

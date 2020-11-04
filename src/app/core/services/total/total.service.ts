@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 // libreria que añade principios reactivos
 import {BehaviorSubject} from 'rxjs';
 
-import {Product} from '../../../product.model';
+import {Product} from '../../models/product.model';
 
 @Injectable({
   providedIn: 'root'

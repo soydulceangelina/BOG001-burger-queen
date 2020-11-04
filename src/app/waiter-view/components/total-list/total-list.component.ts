@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {TotalService} from '../../../core/services/total/total.service';
 
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import {Order, status} from '../../../order.model';
+import {Order, status} from '../../../core/models/order.model';
 
 import Swal from 'sweetalert2';
 
