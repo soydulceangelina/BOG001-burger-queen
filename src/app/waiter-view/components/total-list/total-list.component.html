@@ -1,7 +1,8 @@
 <h4>Tu orden</h4>
 <div class="container">
     <ul class="container__products">
-        <li *ngFor="let product of total">{{product.title}} {{product.priceByQty | currency}}
+        <li *ngFor="let product of total">
+            {{product.title}} {{product.priceByQty | currency}}
             <button (click)="subtraction(product.id)">-</button>
             <p>{{product.quantity}}</p>
             <button (click)="sum(product.id)">+</button>

@@ -1,5 +1,5 @@
 <h1>Pedidos en proceso</h1>
-<div class="card" *ngFor="let order of orders">
+<div class="card" *ngFor="let order of (orders | async)">
     <div class="card__product">
         <ul *ngFor="let product of order.products">
             <li> {{ product.title}} <strong>{{ product.quantity}}</strong></li>
