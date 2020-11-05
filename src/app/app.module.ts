@@ -10,6 +10,8 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import {LayoutComponent} from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 // import { environment } from '../environments/environment';
 
 @NgModule({
@@ -24,7 +26,7 @@ import { CoreModule } from './core/core.module';
     SharedModule,
     CoreModule,
     HttpClientModule,
-    [SweetAlert2Module.forRoot()]
+    [SweetAlert2Module.forRoot()ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })]
   ],
   providers: [],
   bootstrap: [AppComponent]
