@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604890464420,
+  "timestamp": 1604890670051,
   "index": "https://soydulceangelina.github.io/BOG001-burger-queen/index.html",
   "assetGroups": [
     {
@@ -75,7 +75,7 @@
       "strategy": "performance",
       "maxSize": 3,
       "maxAge": 86400000,
-      "timeoutMs": 20000,
+      "timeoutMs": 2000,
       "cacheQueryOptions": {
         "ignoreVary": true
       },
