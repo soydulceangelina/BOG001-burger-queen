@@ -26,7 +26,8 @@ import { environment } from '../environments/environment';
     SharedModule,
     CoreModule,
     HttpClientModule,
-    [SweetAlert2Module.forRoot()ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })]
+    [SweetAlert2Module.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })]
   ],
   providers: [],
   bootstrap: [AppComponent]
