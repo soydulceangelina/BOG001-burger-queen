@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604888668788,
+  "timestamp": 1604889626199,
   "index": "https://soydulceangelina.github.io/BOG001-burger-queen/index.html",
   "assetGroups": [
     {
@@ -19,7 +19,7 @@
         "https://soydulceangelina.github.io/BOG001-burger-queen/9.e12387e96e20f7bb4810.js",
         "https://soydulceangelina.github.io/BOG001-burger-queen/favicon.ico",
         "https://soydulceangelina.github.io/BOG001-burger-queen/index.html",
-        "https://soydulceangelina.github.io/BOG001-burger-queen/main.1da9ecaa902a36cc1720.js",
+        "https://soydulceangelina.github.io/BOG001-burger-queen/main.3f1ca1419c68f8b6d38d.js",
         "https://soydulceangelina.github.io/BOG001-burger-queen/manifest.webmanifest",
         "https://soydulceangelina.github.io/BOG001-burger-queen/polyfills.2b9efda34b919da8fe8a.js",
         "https://soydulceangelina.github.io/BOG001-burger-queen/runtime.bc7369af2dbd194ce3c3.js",
@@ -115,8 +115,8 @@
     "https://soydulceangelina.github.io/BOG001-burger-queen/assets/login-image/login-image.jpg": "0782048f294062b63ba0c838d6cb7b868ac00fb7",
     "https://soydulceangelina.github.io/BOG001-burger-queen/assets/logo/logo.png": "08512886b2081d9eb16214d30a57e1548a3ae9c4",
     "https://soydulceangelina.github.io/BOG001-burger-queen/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://soydulceangelina.github.io/BOG001-burger-queen/index.html": "3d8970b747c01ae18a2e5c2740c7384408efaa13",
-    "https://soydulceangelina.github.io/BOG001-burger-queen/main.1da9ecaa902a36cc1720.js": "4fe411e9b75381686aac081f1c0cdecbf58d001f",
+    "https://soydulceangelina.github.io/BOG001-burger-queen/index.html": "62709f944e015eaacb5e17974f02477064411a43",
+    "https://soydulceangelina.github.io/BOG001-burger-queen/main.3f1ca1419c68f8b6d38d.js": "c08bc128d30899d07cb543a1a76dcd93be9bae0d",
     "https://soydulceangelina.github.io/BOG001-burger-queen/manifest.webmanifest": "7cbaed2afab1edf1e22d1c56889e68910cbd3bd7",
     "https://soydulceangelina.github.io/BOG001-burger-queen/polyfills.2b9efda34b919da8fe8a.js": "9db3f1bf5afbecb31233abc0b143858b395cc9e9",
     "https://soydulceangelina.github.io/BOG001-burger-queen/runtime.bc7369af2dbd194ce3c3.js": "576bffca52c65224bbad9f35780a8d6de5538615",
