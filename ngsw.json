@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604892414020,
+  "timestamp": 1604960796680,
   "index": "https://soydulceangelina.github.io/BOG001-burger-queen/index.html",
   "assetGroups": [
     {
@@ -72,7 +72,7 @@
         "https:\\/\\/burger-queen-api\\.vercel\\.app\\/.*",
         "https:\\/\\/firebasestorage\\.googleapis\\.com\\/v0\\/b\\/burgerqueen-ce419\\.appspot\\.com\\/"
       ],
-      "strategy": "performance",
+      "strategy": "freshness",
       "maxSize": 3,
       "maxAge": 86400000,
       "timeoutMs": 2000,
