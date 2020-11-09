@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604889996396,
+  "timestamp": 1604890333101,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -75,7 +75,7 @@
       "strategy": "performance",
       "maxSize": 3,
       "maxAge": 86400000,
-      "timeoutMs": 2000,
+      "timeoutMs": 20000,
       "cacheQueryOptions": {
         "ignoreVary": true
       },
