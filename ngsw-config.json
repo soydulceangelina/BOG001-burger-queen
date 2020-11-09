@@ -32,7 +32,7 @@
       "name": "assets-from-api",
       "urls": [
         "https://burger-queen-api.vercel.app/**",
-        "https://firebasestorage.googleapis.com/v0/b/burgerqueen-ce419.appspot.com/**"
+        "https://firebasestorage.googleapis.com/v0/b/burgerqueen-ce419.appspot.com/"
       ],
       "cacheConfig": {
         "maxSize": 3,
