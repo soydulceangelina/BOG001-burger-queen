@@ -11,10 +11,7 @@
           "/index.html",
           "/manifest.webmanifest",
           "/*.css",
-          "/polyfills.*.js",
-          "/runtime.*.js",
-          "/*.js",
-          "!/*-sw.js"
+          "/*.js"
         ]
       }
     },
@@ -34,17 +31,13 @@
     {
       "name": "api",
       "urls": [
-        "https://burger-queen-api.vercel.app/plates",
-        "https://firebasestorage.googleapis.com/v0/b/burgerqueen-ce419.appspot.com/o/**",
-        "https://firestore.googleapis.com/**",
-        "https://www.googleapis.com/identitytoolkit/v3/relyingparty/**",
-        "https://apis.google.com/js/api.js?onload=__iframefcb200423",
-        "https://www.google.com/images/**"
+        "https://burger-queen-api.vercel.app/**",
+        "https://firebasestorage.googleapis.com/v0/b/burgerqueen-ce419.appspot.com/o/**"
       ],
       "cacheConfig": {
         "maxSize": 3,
         "maxAge": "1d",
-        "strategy": "freshness",
+        "strategy": "performance",
         "timeout": "2s"
       }
     }
