@@ -11,7 +11,10 @@
           "/index.html",
           "/manifest.webmanifest",
           "/*.css",
-          "/*.js"
+          "/polyfills.*.js",
+          "/runtime.*.js",
+          "/*.js",
+          "!/*-sw.js"
         ]
       }
     },
@@ -33,12 +36,15 @@
       "urls": [
         "https://burger-queen-api.vercel.app/**",
         "https://firebasestorage.googleapis.com/v0/b/burgerqueen-ce419.appspot.com/o/**",
-        "https://firestore.googleapis.com/**"
+        "https://firestore.googleapis.com/**",
+        "https://www.googleapis.com/**",
+        "https://apis.google.com/js/**",
+        "https://www.google.com/images"
       ],
       "cacheConfig": {
-        "maxSize": 30,
+        "maxSize": 3,
         "maxAge": "1d",
-        "strategy": "performance",
+        "strategy": "freshness",
         "timeout": "2s"
       }
     }
