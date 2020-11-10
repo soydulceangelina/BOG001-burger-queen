@@ -37,7 +37,7 @@
       "cacheConfig": {
         "maxSize": 3,
         "maxAge": "1d",
-        "strategy": "freshness",
+        "strategy": "performance",
         "timeout": "2s"
       }
     }
