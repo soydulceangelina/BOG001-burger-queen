@@ -30,11 +30,7 @@
   "dataGroups": [
     {
       "name": "api",
-      "urls": [
-        "https://burger-queen-api.vercel.app/**",
-        "https://firebasestorage.googleapis.com/v0/b/burgerqueen-ce419.appspot.com/**",
-        "https://burgerqueen-ce419.firebaseio.com/**"
-      ],
+      "urls": ["https://burger-queen-api.vercel.app/**","https://firestore.googleapis.com/**"],
       "cacheConfig": {
         "maxSize": 3,
         "maxAge": "1d",
