@@ -31,7 +31,7 @@
     {
       "name": "assets-from-api",
       "urls": [
-        "https://burger-queen-api.vercel.app/**",
+        "https://burger-queen-api.vercel.app/plates",
         "https://firebasestorage.googleapis.com/v0/b/burgerqueen-ce419.appspot.com/**"
       ],
       "cacheConfig": {
