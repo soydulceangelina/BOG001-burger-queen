@@ -7,7 +7,7 @@ import {ReadyComponent} from './kitchen-view/components/ready/ready.component';
 import {DeliveredComponent} from './kitchen-view/components/delivered/delivered.component';
 
 
-import {AdminGuard} from './admin.guard';
+import {AdminGuard} from './core/guards/admin/admin.guard';
 
 const routes: Routes = [
   {
