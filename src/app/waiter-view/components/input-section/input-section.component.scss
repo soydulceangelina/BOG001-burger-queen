@@ -5,6 +5,8 @@
     display: flex;
     justify-content: space-between;
     font-family: $roboto-font;
+    margin-left: 15px;
+
     &__label{
         input{
             @extend %inputStyle;

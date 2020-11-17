@@ -32,6 +32,9 @@ h3,h4{
         }
     }
     &__pay{
+        width: 345px;
+        position: absolute;
+        bottom: 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
