@@ -1,12 +1,36 @@
+// Fuentes
 $cinzel-font: 'Cinzel', serif;
 $roboto-font: 'Roboto', sans-serif;
+
+// Colores
 $red-color: #f7473a;
 $yellow-color: #f7b21f;
 $dark-color: #2f3132;
 $light-color: #fafafa;
 $gray-color: #d1d2d2;
 
+// Medidas
 $border-radius: 5px;
+
+// MQ
+
+$bp-small: 600px;
+$bp-med: 800px;
+$bp-large: 1050px;
+
+$breakpoints: (
+  's':  (max-width:  $bp-small),
+  'm':  (max-width:  $bp-med),
+  'l':  (max-width: $bp-large),
+) !default;
+
+@mixin applyTo($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+}
 
 %inputStyle{
     background: rgba(255, 255, 255, .7);
@@ -47,4 +71,6 @@ html{
 
 body{
     background-color: $light-color;
+    width: 1030px;
+    margin: 0 auto;
 }

@@ -2,6 +2,7 @@
 
 .container{
     width: 50vw;
+    max-width: 530px;
     display: flex;
     justify-content: space-between;
     font-family: $roboto-font;
@@ -23,4 +24,8 @@ button{
     font-weight: bold;
     border-radius: $border-radius;
     background: $red-color;
+}
+
+@include applyTo('l'){
+  
 }

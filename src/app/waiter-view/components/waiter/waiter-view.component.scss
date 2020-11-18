@@ -35,3 +35,9 @@
         padding: 10px;
     }
 }
+
+@include applyTo('m'){
+    .main--container{
+        display: block;
+    }
+}
