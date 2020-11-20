@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderNavComponent } from './header-nav.component';
 
-describe('HeaderNavComponent', () => {
+xdescribe('HeaderNavComponent', () => {
   let component: HeaderNavComponent;
   let fixture: ComponentFixture<HeaderNavComponent>;
 

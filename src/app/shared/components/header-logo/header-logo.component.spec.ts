@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderLogoComponent } from './header-logo.component';
 
-describe('HeaderLogoComponent', () => {
+xdescribe('HeaderLogoComponent', () => {
   let component: HeaderLogoComponent;
   let fixture: ComponentFixture<HeaderLogoComponent>;
 

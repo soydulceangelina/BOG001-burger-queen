@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputSectionComponent } from './input-section.component';
 
-describe('InputSectionComponent', () => {
+xdescribe('InputSectionComponent', () => {
   let component: InputSectionComponent;
   let fixture: ComponentFixture<InputSectionComponent>;
 
